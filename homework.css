@@ -1,0 +1,433 @@
+/* Janis Amolins ja19023 */
+
+* {
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif, 'Times New Roman', Times, serif;
+  font-size: 14px;
+  min-width: 1500px;
+}
+
+@font-face{
+  font-family: 'Roboto', sans-serif;
+  src: url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+}
+
+a {
+  text-decoration: none;
+}
+
+
+#top-menu{  /*top menu bar */
+  position: fixed;  /* check this later */
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.2em;
+  background-color: rgba(14, 2, 35, 0.8);
+  height: 80px;
+  padding-top: 20px;
+  color: white;
+  z-index: 10;
+}
+
+  
+#top-menu a, .sub-menu-caption{
+  color: white;
+  padding: 14px 16px;
+  float: left;
+
+}
+
+#top-menu .btn{     /* Sign in button */
+  padding: 5px 10px;
+  width: 60px;
+}
+
+.upper-menu.right{   
+  float: right;
+  overflow: hidden;
+  border: 1px solid white;
+  background-color: rgb(242, 213, 26, 0.8);
+  border-radius: 32px;
+  margin-right: 30px;
+  text-align: center;
+}
+
+#top-menu .upper-menu.right:hover{
+  background-color: rgb(242, 213, 26);
+  
+}
+#top-menu .upper-menu.right a:hover{
+  color: white;
+}
+
+
+.sub-menu{
+    float: left;
+    overflow: hidden;
+}
+
+.expand{
+  float: right;
+  overflow: hidden;
+}
+
+  
+.sub-menu .sub-menu-caption {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+#top-menu a:hover, .sub-menu:hover {
+    color:rgb(242, 177, 26);
+    
+}
+
+#top-menu .sub-menu:hover {
+  font-size: 0.9em;
+}
+
+.sub-menu-caption{
+  color:rgb(242, 177, 26);
+  cursor: pointer;
+}
+  
+.sub-menu {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  background-color:rgba(14, 2, 35, 0.8);
+  z-index: 1;
+}
+
+  
+.sub-menu-caption:hover .sub-menu {
+    display: block;
+    margin-top: 5px;
+  }
+
+/*/// header image /// */
+
+header{
+  width: auto;
+  height: 800px;
+}
+
+header{
+  display: block;
+  background: url("images/topimage.jpeg")center no-repeat;
+  background-size: cover;
+  background-position-y: 0;
+}
+
+header .bg-overlay{
+  height: 800px;
+  background-color:rgba(14, 2, 35, 0.5);
+}
+
+/*////Title, social media */
+
+.title{
+  display: block;
+  position: relative;
+  float: right;
+  top: 600px; 
+  right: 30px;
+  color: white; 
+  padding: 0 20px;
+}
+
+.title h1{      /* main title */
+  font-size: 72px;
+}
+
+.title h3{    /* sub title */
+  font-size: 28px;
+  float: right;
+  padding-top: 30px;
+
+}
+.social{  /* Follow us on Social Media */
+  display: flex;
+  position: absolute;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  top: 80px;
+  padding: 20px 20px;
+  margin: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.social h5{
+  color: white; /* Follow us on Social Media */
+  opacity: 80%;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  width: 230px;
+}
+
+.social-btns img{ /* facebook, twitte logo*/
+  width: 25px; 
+  height: 25px;
+  opacity: 60%;
+}
+.social-btns img:hover{
+  opacity: 100%;
+}
+
+
+/*///main text//*/
+
+#summary{
+  height: 400px;
+}
+
+#summary h2{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 42px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  font-weight: bold;
+}
+
+#summary p{
+  font-size: 18px;
+  color: rgb(132, 132, 132);
+  text-align: left;
+  margin: 0 110px 0 110px;
+  line-height: 1.6;
+} 
+
+#summary .add span{
+  font-size: 1.5em;
+}
+
+/*/// cast /// */
+
+#cast{
+  position: relative;
+  background: url("images/car.jpg")center no-repeat;
+  background-size: cover;
+  text-align:center; 
+  background-position-y: 0;
+  color: white;
+}
+
+#cast .bg-overlay{
+  background-color: rgba(14, 2, 35, 0.9);
+  height: 700px;
+}
+
+
+#cast h4{             /* CAST AND CREW title */
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 10px 0 50px 0;
+  font-weight: bold;
+}
+
+#cast .line{
+  display: inline-block;
+  width: 30px;
+  border-top: 2px solid white;
+  margin-top: 60px;
+}
+
+.cast-head{   /* cast, director yellow tags */
+  display: inline-block;
+  position: absolute;  
+  left: 10px;
+  top: 10px;
+  background-color: rgba(242, 213, 26, 0.8);
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  opacity: 80%;
+}
+
+.cast-info-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cast-text a{
+  text-decoration: none;
+  color: rgb(42, 42, 42);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.cast-text p{     /*  actors role name */
+  color: rgb(132, 132, 132); 
+  font-size: 14px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.cast-info img{
+  width: 220px;
+}
+
+.cast-info img:hover ~.cast-text{      /*bottom block*/
+  background-color: rgb(242, 213, 26);
+}
+
+.cast-info img:hover ~ .cast-text a{  /*name of actor */
+  color: white;
+}
+
+.cast-info img:hover ~ .cast-text{ /*bottom block opacity*/
+  opacity: 100%;
+}
+
+.cast-info img:hover ~ .cast-head { /*cast/director block opacity*/
+  background-color: rgb(242, 213, 26);
+
+}
+
+.cast-info-cell{
+  position: relative;
+}
+
+.cast-text{
+  position: absolute;
+  bottom: 0;
+  opacity: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  padding: 20px 10px 5px;
+}
+
+/*//// trailer ////*/
+
+#trailer .upper{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 42px;
+  padding: 40px;
+  font-weight: bold;
+}
+
+iframe{
+  display: block;
+  margin: auto;
+  width: 65%;
+  height: 700px;
+}
+
+#trailer p {
+  display: block;
+  color: rgb(132, 132, 132);
+  font-size: 18px;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+#trailer a {
+  color: rgb(132, 132, 132);
+}
+
+
+/* // get tickets // */
+
+#tickets {
+  display: block;
+  height: 260px;
+  background: url("images/cinema.jpg")center no-repeat;
+  box-shadow: inset 0 0 0 200px rgba(255,255,255,.2);
+  background-position-y: 0;
+  text-align: center;
+}
+
+#tickets .btn{
+  width: 160px;
+  margin-top: 55px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(242, 213, 26, 0.8);
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  padding: 15px 0;
+  text-decoration: none;
+  font-size: 16px;
+  border: 1px solid white;
+  border-radius: 32px;
+}
+
+#tickets .btn:hover{
+  background-color: rgb(242, 213, 26);
+}
+
+#tickets h4{
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#tickets .line{
+  display: inline-block;
+  width: 30px;
+  border-top: 2px solid white;
+  margin-top: 60px;
+}
+
+/* // bottom menu // */
+
+footer li{
+  display: block;
+  float: left;
+  padding-right: 5px;
+  border-right: 1px solid rgb(181, 181, 181);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer li:last-child{
+  border-right: none;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  font-size: 0.8em;
+}
+
+footer a{
+  padding-left: 5px;
+  color: rgb(136, 136, 136);
+}
+
+footer a:hover{
+  color:rgb(242, 213, 26);
+}
+
+
+
+
